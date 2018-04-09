@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bianote"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.noteapp.AddActivity">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                app:title="Add Note"
+                app:titleTextColor="#fff"
+
+                android:id="@+id/toobar"
+                android:background="#baa37d"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </android.support.v7.widget.Toolbar>
+            <LinearLayout
+                android:padding="15dp"
+                android:layout_below="@+id/toobar"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/back"
+                    android:padding="10dp"
+                    android:layout_below="@+id/toobar"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="7"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:background="@android:color/transparent"
+                                android:clickable="true"
+                                android:editable="false"
+                                android:id="@+id/edtDate"
+                                android:text="Date"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:text="at time"
+                                android:background="@android:color/transparent"
+                                android:editable="false"
+                                android:clickable="true"
+                                android:id="@+id/edtTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <ImageView
+                            android:id="@+id/imgcamera"
+                            android:background="@drawable/camera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/imggallery"
+                            android:background="@drawable/gallery_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_below="@+id/edtDate"
+                        android:background="#51180f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"/>
+                    <EditText
+                        android:maxLines="10"
+                        android:minLines="7"
+                        android:id="@+id/edtContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center"
+
+                        android:id="@+id/imgSelect"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignEnd="@+id/edtDate"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="158dp"
+                        android:layout_marginEnd="15dp"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <android.support.design.widget.NavigationView
+            app:menu="@menu/navigation"
+            android:id="@+id/nav_view"
+            app:headerLayout="@layout/nav_header"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.v4.widget.DrawerLayout
+        tools:context="com.example.dell.noteapp.SettingActivity"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                app:title="Setting"
+                app:titleTextColor="#fff"
+
+                android:id="@+id/toobar"
+                android:background="#baa37d"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </android.support.v7.widget.Toolbar>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/txtlock"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="17dp"
+                android:background="#696262" />
+
+            <TextView
+                android:textColor="#6ac4c6"
+                android:padding="10dp"
+                android:layout_marginLeft="18dp"
+                android:id="@+id/txtlock"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/toggle"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="38dp"
+                android:text="Change Smart Lock" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txt"
+                android:layout_marginTop="24dp"
+                android:background="#877777" />
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="31dp"
+                android:text="Enable PIN"
+                android:textColor="#63e6c5"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:background="#8d2ab1"
+
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:checked="false" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/toggle"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="21dp"
+                android:background="#7e7575" />
+
+        </RelativeLayout>
+        <android.support.design.widget.NavigationView
+            app:menu="@menu/navigation"
+            android:id="@+id/nav_view"
+            app:headerLayout="@layout/nav_header"
+            android:layout_width="match_parent"
+            android:layout_gravity="start"
+            android:layout_height="match_parent">
+
+
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
